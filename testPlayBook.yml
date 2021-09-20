@@ -1,0 +1,14 @@
+---
+- name: Check Disk Space Usage
+  hosts: all
+  tasks:
+    - name: Disk usage from command module
+      command: df -h
+      register: space
+    - debug:
+        var: space
+
+    - name: copy files to local
+      fetch:
+        src: /var/lib/jenkins/workspace/TestJob/Day1.txt
+        dest: /home/ec2-user
