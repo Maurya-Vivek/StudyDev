@@ -21,5 +21,5 @@ This will run the while loop forever inside the container and same can be checke
  * Run container with user defined runtimevalues
 	
 ```bash
-$ docker run --name demo -d script-demo false UsersfirstArg UserssecoundArg
+$ docker run --name poc -d cmd-Args-Override false UsersfirstArg UserssecoundArg
 ```
